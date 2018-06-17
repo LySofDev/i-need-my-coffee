@@ -14,3 +14,17 @@ test('Status route returns an empty 200 response', async () => {
     .expect('Content-Type', /json/)
     .expect(200, {});
 });
+
+test('Error 401 Unauthorized', async () => {
+  await request
+    .get('/errors/401')
+    .expect('Content-Type', /json/)
+    .expect(401, { errors: ["Unauthorized"] });
+});
+
+test('Error 403 Forbidden', async () => {
+  await request
+    .get('/errors/403')
+    .expect('Content-Type', /json/)
+    .expect(403, { errors: ["Forbidden"] });
+});

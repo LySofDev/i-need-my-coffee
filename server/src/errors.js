@@ -7,7 +7,7 @@ const err401 = (req, res) => {
 }
 
 const err403 = (req, res) => {
-  res.status(403).json({ error: ["Forbidden"] });
+  res.status(403).json({ errors: ["Forbidden"] });
 }
 
 module.exports = {
