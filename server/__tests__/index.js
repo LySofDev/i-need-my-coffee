@@ -5,7 +5,7 @@ test('Missing routes raise a 404 error', async () => {
   await request
     .get('/foo')
     .expect('Content-Type', /json/)
-    .expect(404, { errors: [ 'Resource not found' ]});
+    .expect(404, { errors: [ 'Not Found' ]});
 });
 
 test('Status route returns an empty 200 response', async () => {
