@@ -52,6 +52,14 @@ module.exports = function(app) {
     }
   );
 
+  app.get('/auth/verify', (req, res) => {
+    if (req.cookie.token && req.cookie.token.length > 0) {
+      res.status(200).json({});
+    } else {
+      res.redirect('/errors/401');
+    }
+  });
+
   // Logout callback
   app.get('/auth/logout', (req, res) => {
     res.cookie('token', '');
