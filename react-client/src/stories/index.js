@@ -5,7 +5,8 @@ import { action } from '@storybook/addon-actions';
 import { linkTo } from '@storybook/addon-links';
 
 import { Button, Welcome } from '@storybook/react/demo';
-import maps from './maps'
+import maps from './maps';
+import loadingIndicator from './loading-indicator';
 
 storiesOf('Welcome', module).add('to Storybook', () => <Welcome showApp={linkTo('Button')} />);
 
@@ -20,3 +21,4 @@ storiesOf('Button', module)
   ));
 
 maps();
+loadingIndicator();
