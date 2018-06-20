@@ -1,21 +1,13 @@
-import React from 'react';
 import { compose } from 'recompose';
 import { geolocated } from 'react-geolocated';
-import { BrowserNotSupported, GeolocationDisabled, ErrorGeolocating } from './error-branches';
+import BrowserNotSupported from './BrowserNotSupported';
+import GeolocationDisabled from './GeolocationDisabled';
+import ErrorGeolocating from './ErrorGeolocating';
+import UserLocation from './UserLocation';
 
-const GeolocationAPI = compose(
+export default compose(
   geolocated(),
   BrowserNotSupported,
   GeolocationDisabled,
   ErrorGeolocating
-);
-
-const UserLocation = props => {
-  if (!props.coords) return props.whileLoading;
-  return props.withCoordinates({
-    latitude: props.coords.latitude,
-    longitude: props.coords.longitude
-  });
-}
-
-export default GeolocationAPI(UserLocation);
+)(UserLocation);
