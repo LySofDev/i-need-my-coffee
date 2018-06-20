@@ -1,7 +1,4 @@
 import React from 'react';
-import GoogleMap from '../GoogleMap';
-import UserLocation from '../UserLocation';
-import LoadingIndicator from '../LoadingIndicator';
 
 export default props => (
   <div>

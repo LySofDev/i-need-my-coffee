@@ -1,4 +1,3 @@
-import React from 'react';
 import { compose } from 'recompose';
 import { withScriptjs, withGoogleMap } from "react-google-maps";
 import Map from './Map';

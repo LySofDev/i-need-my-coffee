@@ -1,5 +1,4 @@
 import React from 'react';
-import { GOOGLE_MAPS_API_URL } from '../constants';
 
 const GooglePlacesContext = React.createContext();
 

@@ -1,3 +1,4 @@
+import React from 'react';
 import { withProps } from 'recompose';
 import { GOOGLE_MAPS_API_KEY, GOOGLE_MAPS_API_URL } from '../constants';
 
