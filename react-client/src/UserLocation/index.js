@@ -11,7 +11,7 @@ const GeolocationAPI = compose(
 );
 
 const UserLocation = props => {
-  if (!props.coords) return (<div>loading</div>);
+  if (!props.coords) return props.whileLoading;
   return props.withCoordinates({
     latitude: props.coords.latitude,
     longitude: props.coords.longitude
